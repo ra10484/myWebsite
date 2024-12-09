@@ -20,6 +20,58 @@
 
 <h1 style="font-size:70px;">All about Australia </h1>
 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Mode Button</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .dark-mode-btn {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    /* Rainbow border on hover */
+    .dark-mode-btn:hover {
+      border-image: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet);
+      border-image-slice: 1;
+    }
+
+    /* Blue underline effect when hovering over the text */
+    .dark-mode-btn:hover::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: blue;
+      margin-top: 5px;
+    }
+
+  </style>
+</head>
+<body>
+  <button class="dark-mode-btn">Dark Mode</button>
+</body>
+</html>
 
 <head>
    
