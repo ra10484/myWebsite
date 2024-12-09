@@ -248,3 +248,113 @@
 
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Mode Toggle</title>
+  <style>
+    :root {
+      --background-color-light: white;
+      --background-color-dark: black;
+      --text-color-light: black;
+      --text-color-dark: white;
+    }
+
+    body {
+      background-color: var(--background-color-light);
+      color: var(--text-color-light);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-image: linear-gradient(rgb(0, 193, 255), rgb(222, 222, 222));
+      min-width: 100%;
+      min-height: 100%;
+      transition: background-color 1s, color 1s;
+    }
+
+    body.dark-mode {
+      background-color: var(--background-color-dark);
+      color: var(--text-color-dark);
+      background-image: none; /* Disable gradient when dark mode is active */
+      animation: slideToBlack 1s forwards; /* Animating the background to black */
+    }
+
+    /* Animation for side-to-side color change */
+    @keyframes slideToBlack {
+      0% {
+        background-color: var(--background-color-light);
+      }
+      50% {
+        background-color: grey; /* Intermediate gray stage */
+      }
+      100% {
+        background-color: var(--background-color-dark);
+      }
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .bn632-hover {
+      width: 160px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      margin: 20px;
+      height: 55px;
+      text-align: center;
+      border: none;
+      background-size: 300% 100%;
+      border-radius: 50px;
+      transition: all .4s ease-in-out;
+    }
+
+    .bn632-hover:hover {
+      background-position: 100% 0;
+    }
+
+    .bn632-hover:focus {
+      outline: none;
+    }
+
+    .bn632-hover.bn23 {
+      background-image: linear-gradient(to right, #009245, #fcee21, #00a8c5, #d9e021);
+      box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+    }
+
+    h1 {
+      margin-top: 50px;
+    }
+
+  </style>
+</head>
+
+<body>
