@@ -1,12 +1,42 @@
-<html>
+
+ 
+
+
+<html>lang="en">
 <head>
   <style>
+:root {
+    --background-color-light: white;
+    --background-color-dark: #121212;
+    --text-color-light: black;
+    --text-color-dark: white;
+}
 
+body {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
 
-<html>
-<head>
-  <style>
+body.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
 
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
 .bn632-hover {
   width: 160px;
   font-size: 16px;
@@ -56,7 +86,14 @@
       
       
      
+ 
+  
   </style>
+
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Toggle</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -65,12 +102,62 @@
    
 </body>
 <h1>All About Austrailia</h1>
-<a href="/"><button class="bn632-hover bn23">Button</button></a>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   <button id="toggle-button">Toggle Dark Mode</button>
+
+    <div>
+        <h1>Welcome to Dark Mode Toggle</h1>
+        <p>This is an example of how to toggle between light and dark modes using only CSS and HTML.</p>
+    </div>
+
+    <script src="script.js"></script>
+  
+  
+  
+ <script>const toggleButton = document.getElementById("toggle-button");
+
+toggleButton.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+});</script> 
+  
+  
+  <a href="/"><button class="bn632-hover bn23">Button</button></a>
 
 <br>
 
 
-<img src="https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/10A3C/production/_129365186_gettyimages-103455489.jpg">
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <img src="https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/10A3C/production/_129365186_gettyimages-103455489.jpg">
 
 
 <p>The Sydney Opera House is a multi-venue performing arts centre in Sydney, New South Wales, Australia. Located on the<br> foreshore of Sydney Harbour, it is widely regarded as one of the world's most famous and distinctive buildings and a masterpiece of 20th-century architecture</p>
