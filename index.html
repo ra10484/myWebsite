@@ -1,193 +1,139 @@
-
- 
-
-
-<html>lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Mode Toggle</title>
   <style>
-:root {
-    --background-color-light: white;
-    --background-color-dark: #121212;
-    --text-color-light: black;
-    --text-color-dark: white;
-}
+    :root {
+      --background-color-light: white;
+      --background-color-dark: #121212;
+      --text-color-light: black;
+      --text-color-dark: white;
+    }
 
-body {
-    background-color: var(--background-color-light);
-    color: var(--text-color-light);
-    font-family: Arial, sans-serif;
-    transition: background-color 0.3s, color 0.3s;
-}
+    body {
+      background-color: var(--background-color-light);
+      color: var(--text-color-light);
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+      text-align: center;
+      background-image: linear-gradient(rgb(0, 193, 255), rgb(222, 222, 222));
+      min-width: 100%;
+      min-height: 100%;
+    }
 
-body.dark-mode {
-    background-color: var(--background-color-dark);
-    color: var(--text-color-dark);
-}
+    body.dark-mode {
+      background-color: var(--background-color-dark);
+      color: var(--text-color-dark);
+      background-image: none; /* Disable gradient when dark mode is active */
+    }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
 
-button:hover {
-    background-color: #45a049;
-}
-.bn632-hover {
-  width: 160px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-  margin: 20px;
-  height: 55px;
-  text-align:center;
-  border: none;
-  background-size: 300% 100%;
-  border-radius: 50px;
-  moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-}
+    button:hover {
+      background-color: #45a049;
+    }
 
-.bn632-hover:hover {
-  background-position: 100% 0;
-  moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-}
+    .bn632-hover {
+      width: 160px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      margin: 20px;
+      height: 55px;
+      text-align: center;
+      border: none;
+      background-size: 300% 100%;
+      border-radius: 50px;
+      transition: all .4s ease-in-out;
+    }
 
-.bn632-hover:focus {
-  outline: none;
-}
+    .bn632-hover:hover {
+      background-position: 100% 0;
+    }
 
-.bn632-hover.bn23 {
-  background-image: linear-gradient(
-    to right,
-    #009245,
-    #fcee21,
-    #00a8c5,
-    #d9e021
-  );
-  box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
-}
-     body{
-         text-align: center;
-         background-image: linear-gradient(rgb(0, 193, 255), rgb(222, 222, 222));
-         min-width: 100%;
-         min-height: 100%;
-      }
-      
-      
-     
- 
-  
+    .bn632-hover:focus {
+      outline: none;
+    }
+
+    .bn632-hover.bn23 {
+      background-image: linear-gradient(to right, #009245, #fcee21, #00a8c5, #d9e021);
+      box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+    }
+    
+    #toggle-button{
+      width: 160px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      margin: 20px;
+      height: 55px;
+      text-align: center;
+      border: none;
+      background-size: 300% 100%;
+      border-radius: 50px;
+      transition: all .4s ease-in-out;
+    }
+    
+    #toggle-button:hover{
+       background-position: 100% 0;
+    }
+    
+      #toggle-button:focus {
+      outline: none;
+    }
+
+    #toggle-button {
+      background-image: linear-gradient(to right, #009245, #fcee21, #00a8c5, #d9e021);
+      box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+    }
+    
+
+    h1 {
+      margin-top: 50px;
+    }
+
   </style>
-
- <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Mode Toggle</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
+  <h1>All About Australia</h1>
 
-   
-</body>
-<h1>All About Austrailia</h1>
+  <button id="toggle-button">Dark Mode</button>
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-   <button id="toggle-button">Toggle Dark Mode</button>
+  <div>
+    <h1>Welcome to Dark Mode Toggle</h1>
+    <p>This is an example of how to toggle between light and dark modes using only CSS and HTML.</p>
+  </div>
 
-    <div>
-        <h1>Welcome to Dark Mode Toggle</h1>
-        <p>This is an example of how to toggle between light and dark modes using only CSS and HTML.</p>
-    </div>
+  <script>
+    const toggleButton = document.getElementById("toggle-button");
 
-    <script src="script.js"></script>
-  
-  
-  
- <script>const toggleButton = document.getElementById("toggle-button");
+    toggleButton.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
 
-toggleButton.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-});</script> 
-  
-  
   <a href="/"><button class="bn632-hover bn23">Button</button></a>
 
-<br>
+  <br>
 
+  <img src="https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/10A3C/production/_129365186_gettyimages-103455489.jpg" alt="Sydney Opera House">
 
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <img src="https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/10A3C/production/_129365186_gettyimages-103455489.jpg">
-
-
-<p>The Sydney Opera House is a multi-venue performing arts centre in Sydney, New South Wales, Australia. Located on the<br> foreshore of Sydney Harbour, it is widely regarded as one of the world's most famous and distinctive buildings and a masterpiece of 20th-century architecture</p>
-<p>Designed by Danish architect Jørn Utzon and completed by an Australian architectural team headed by Peter Hall, the building was formally opened by Queen Elizabeth II on 20 October<br> 1973, 16 years after Utzon's 1957 selection as winner of an international design competition. The Government of New South Wales, led by the premier, Joseph Cahill, authorised work to begin in 1958 with Utzon directing construction.<br> The government's decision to build Utzon's design is often overshadowed by circumstances that followed, including cost and scheduling overruns as well as the architect's ultimate resignation.</p>
-</body>
-</html>
-
-
-
-
-
-
+  <p>The Sydney Opera House is a multi-venue performing arts centre in Sydney, New South Wales, Australia. Located on the foreshore of Sydney Harbour, it is widely regarded as one of the world's most famous and distinctive buildings and a masterpiece of 20th-century architecture.</p>
+  <p>Designed by Danish architect Jørn Utzon and completed by an Australian architectural team headed by Peter Hall, the building was formally opened by Queen Elizabeth II on 20 October 1973, 16 years after Utzon's 1957 selection as winner of an international design competition.</p>
 
 </body>
-
 </html>
-
-
-      
-      
-
-
-
-   
-
-
-
-
-
-</body>
-
-</html>
-
